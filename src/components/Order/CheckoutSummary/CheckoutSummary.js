@@ -9,16 +9,18 @@ const checkoutSummary = (props) => {
 
 
     return (
-        <div className={classes.CheckoutSummary}>
-            <h1> We hope it tastes well !</h1>
-            <div style={{width:'100%' ,margin:'auto'  }}>
-                <Burger ingredients={props.ingredients}/>
+        <React.Fragment>
+        
+            <h1 className={classes.CheckoutSummary}> We hope it tastes well !</h1>
+            <div style={{width:'100%', margin:'auto'  }}>
+                <Burger   ingredients={props.ingredients}/>
             </div>
-            <Button btnType="Danger" clicked={props.checkoutCancelled}>CANCEL</Button>
-            <Button btnType="Success" clicked={props.checkoutContinued}>CONTINUE</Button>
+            <div className={classes.CheckoutSummary}>
+                <Button btnType="Danger" clicked={props.checkoutCancelled}>CANCEL</Button>
+                <Button btnType="Success" clicked={props.checkoutContinued}>CONTINUE</Button>
 
-        </div>
-
+            </div>
+        </React.Fragment>
     );
 
 
