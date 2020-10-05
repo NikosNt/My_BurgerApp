@@ -65,6 +65,9 @@
 
 
 
+//-----------------------------------------------\
+//na to tsekarw me to diko tou
+
 import * as actionTypes from '../actions/actionTypes'
 import {updatedObject} from './../utility'
 
