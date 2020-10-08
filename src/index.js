@@ -11,10 +11,12 @@ import App from './App';
 import registerServiceWorker from './registerServiceWorker';
 import burgerBuilderReducer from './store/reducers/burgerBuilderReducer'
 import orderReducer from './store/reducers/orderReducer'
+import authReducer from './store/reducers/authReducer'
 
 const rootReducer = combineReducers({
     burgerBuilderReducer: burgerBuilderReducer,
-    orderReducer: orderReducer
+    orderReducer: orderReducer,
+    authReducer: authReducer
 });
 
 // const logger =  store => {  //midleware
