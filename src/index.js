@@ -19,7 +19,7 @@ const rootReducer = combineReducers({
     authReducer: authReducer
 });
 
-
+//To kanw gia ena git commit test
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(rootReducer,composeEnhancers( applyMiddleware(thunk)) );
