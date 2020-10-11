@@ -7,44 +7,40 @@ import { connect } from 'react-redux'
 import Spinner from '../../components/UI/Spinner/Spinner'
 
 class Orders extends Component {
- 
-    componentDidMount(){
-        this.props.onFetchOrders();
+    componentDidMount () {
+        this.props.onFetchOrders(this.props.token);
     }
 
-
-    render(){
-        let orders = <Spinner />
-        if( !this.props.loading ){
-            orders = this.props.orders.map(order => (
-                    <Order key={order.id} 
-                           ingredients={order.ingredients}
-                           price={order.price}
-                           orderData={order.orderData}
-                           />
+    render () {
+        let orders = <Spinner />;
+        if ( !this.props.loading ) {
+            orders = this.props.orders.map( order => (
+                <Order
+                    key={order.id}
+                    ingredients={order.ingredients}
+                    price={order.price} />
             ) )
-            
         }
-        return(
+        return (
             <div>
                 {orders}
             </div>
-        )
+        );
     }
-
 }
 
 const mapStateToProps = state => {
     return{
          orders:state.orderReducer.orders,
-         loading:state.orderReducer.loading
+         loading:state.orderReducer.loading,
+         token:state.authReducer.token
     };
 };
 
 
 const mapDispatchToProps = dispatch => {
     return {
-         onFetchOrders: () => dispatch(actions.fetchOrders())
+         onFetchOrders: (token) => dispatch(actions.fetchOrders(token))
     };
 };
  
