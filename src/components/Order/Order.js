@@ -35,7 +35,7 @@ const order = (props)=> {
                      style={{//textTransform: 'capitalize',
                              display:"inline-block",
                              margin:'0 8px',
-                             //border: '1px solid #ccc',
+                             border: '1px solid #ccc',
                              padding:'5px'
                             }}
                          >{ig.name} : {ig.prop}
@@ -46,7 +46,6 @@ const order = (props)=> {
         <div className={classes.Order}>
             <p>Ingredients: {ingredientOutput} </p>
             <p>Price: <strong>{Number.parseFloat(props.price).toFixed(2)}</strong></p>
-            {/* <p>Name : {props.orderData.name}, Street : {props.orderData.street}</p> */}
             <p>Information:- {infotOutput}</p>
         </div>
     );
