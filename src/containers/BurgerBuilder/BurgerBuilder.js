@@ -12,7 +12,7 @@ import { connect } from 'react-redux'
 import * as actions from '../../store/actions/indexActions'
 
 
-class BurgerBuilder extends Component {
+export class BurgerBuilder extends Component {
 
     state = {
         purchasing:false,
