@@ -13,7 +13,7 @@ import registerServiceWorker from './registerServiceWorker';
 import burgerBuilderReducer from './store/reducers/burgerBuilderReducer';
 import orderReducer from './store/reducers/orderReducer';
 import authReducer from './store/reducers/authReducer';
-import { watchAuth } from './store/sagas/indexSaga'
+import { watchAuth,watchburgerBuilder,watchOrder } from './store/sagas/indexSaga'
 
 const composeEnhancers = process.env.NODE_ENV === 'development' ? window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : null || compose ;
 
@@ -30,6 +30,8 @@ const store = createStore(rootReducer,composeEnhancers(
 ));
 
 sagaMiddlewarre.run(watchAuth);
+sagaMiddlewarre.run(watchburgerBuilder);
+sagaMiddlewarre.run(watchOrder);
 
 const app = (
     <Provider store={store} >

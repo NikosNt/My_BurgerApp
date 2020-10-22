@@ -25,4 +25,7 @@ export  const AUTH_CHECK_TIMEOUT = 'AUTH_CHECK_TIMEOUT';
 export  const AUTH_USER  = 'AUTH_USER';
 export  const AUTH_CHECK_STATE = 'AUTH_CHECK_STATE';
 
+export  const INIT_INGREDIENTS = 'INIT_INGREDIENTS';
 
+export  const PURCHASE_BURGER = 'PURCHASE_BURGER';
+export  const  FETCH_ORDER = 'FETCH_ORDER';
